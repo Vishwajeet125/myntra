@@ -14,7 +14,7 @@ class ImagesSpider(Spider):
         # Read in styleid(s)
         with open(join(dirname(abspath(__file__)), 'ids.txt'), 'r') as f:
             style_ids = map(strip, f)
-        # Raise NameError if `styleids` is not present
+        # Raise NameError if `style_ids` is not present
         if not style_ids:
             raise NameError('Make sure ids.txt exists and has valid entries!')
 
