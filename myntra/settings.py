@@ -27,11 +27,16 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 ITEM_PIPELINES = {
     'scrapy.pipelines.images.ImagesPipeline': 1,
-#    'myntra.pipelines.SomePipeline': 300,
+    'myntra.pipelines.PathExtraction': 300,
 }
 
 # Configure images pipeline
 IMAGES_STORE = join(dirname(abspath(__file__)), '../../exports/myntra')
+
+# Configure feed exports
+FEED_URI = join(dirname(abspath(__file__)), '../../exports/myntra/myntra-%('
+                                            'name)s-%(time)s.csv')
+FEED_FORMAT = 'csv'
 
 # Enable and configure HTTP caching (disabled by default)
 HTTPCACHE_ENABLED=True
