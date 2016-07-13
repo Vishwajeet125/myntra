@@ -58,4 +58,7 @@ class ImagesSpider(Spider):
         item = response.meta['item']
         # Extract product details
         item['product_details'] = selector.xpath('//div[contains(@class, "description") and contains(@class, "stylenote")]/following-sibling::div[1]//text()[normalize-space()]').extract()[0]
+        # Extract image urls
+        item['image_urls'] = selector.xpath('//div[@class="thumbs"]/img/@data-blowup').extract()
+        # Do ya thing!!
         yield item
