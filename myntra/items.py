@@ -11,6 +11,7 @@ from scrapy import Item, Field
 class MyntraItem(Item):
     image_urls = Field()
     images = Field()
+    image_paths = Field()
     product = Field()
     dre_landing_page_url = Field()
     global_attr_article_type = Field()
