@@ -34,7 +34,7 @@ ITEM_PIPELINES = {
 IMAGES_STORE = join(dirname(abspath(__file__)), '../../exports/myntra')
 
 # Enable and configure HTTP caching (disabled by default)
-# HTTPCACHE_ENABLED=True
+HTTPCACHE_ENABLED=True
 #HTTPCACHE_EXPIRATION_SECS=0
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
