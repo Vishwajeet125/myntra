@@ -31,7 +31,7 @@ ITEM_PIPELINES = {
 }
 
 # Configure images pipeline
-IMAGES_STORE = join(dirname(abspath(__file__)), '../../exports/images')
+IMAGES_STORE = join(dirname(abspath(__file__)), '../../exports/myntra')
 
 # Enable and configure HTTP caching (disabled by default)
 # HTTPCACHE_ENABLED=True
